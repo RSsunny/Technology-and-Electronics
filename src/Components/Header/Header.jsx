@@ -1,10 +1,11 @@
+import Navlink from "../Navbar/NavLink";
 import Navbar from "../Navbar/Navbar";
 
 const Header = () => {
   return (
     <div>
-      <h1>Headers</h1>
       <Navbar></Navbar>
+      <Navlink></Navlink>
     </div>
   );
 };
