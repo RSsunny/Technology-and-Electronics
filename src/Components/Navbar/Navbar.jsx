@@ -15,10 +15,10 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
   return (
     <div className="bg-[#FF4512] ">
-      <div className="flex justify-between items-center max-w-7xl mx-auto px-1 md:px-5">
+      <div className="flex justify-between items-center max-w-7xl mx-auto px-2 md:px-5">
         <div className="flex items-center gap-2 py-2">
           <img className="w-10 md:w-20" src={logo} alt="" />
-          <div className="text-2xl md:text-4xl text-white font-medium">
+          <div className="text-3xl md:text-4xl text-white font-medium">
             <span className="font-rancho">Electronics</span>
           </div>
         </div>
