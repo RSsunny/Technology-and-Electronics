@@ -7,8 +7,11 @@ import { Link } from "react-router-dom";
 import { BiMenu, BiMenuAltRight } from "react-icons/bi";
 
 import { useState } from "react";
+import useAuth from "../../Hooks/useAuth";
 
 const Navbar = () => {
+  const { user } = useAuth();
+
   const [menu, setMenu] = useState(false);
   return (
     <div className="bg-[#FF4512] ">
@@ -40,10 +43,26 @@ const Navbar = () => {
             <FaShopify></FaShopify>
             <h1 className="absolute text-xs right-0 top-0 bg-white rounded-full p-1 border-2 border-white"></h1>
           </div>
-          <div className="text-xl md:text-2xl font-rancho flex items-centergap-2 border px-2 md:px-4 md:py-1 rounded-full">
-            <LiaUserSolid className=" text-2xl md:text-3xl"></LiaUserSolid>
-            <Link>Login</Link>
-          </div>
+
+          {user ? (
+            <Link to={user ? "/profile" : "/login"}>
+              {" "}
+              <div className="avatar online">
+                <div className="w-10 rounded-full">
+                  {user?.photoURL ? (
+                    <img src={user.photoURL} alt="" />
+                  ) : (
+                    <LiaUserSolid className=" text-2xl md:text-4xl"></LiaUserSolid>
+                  )}
+                </div>
+              </div>
+            </Link>
+          ) : (
+            <div className="text-xl md:text-2xl font-rancho flex items-centergap-2 border px-2 md:px-4 md:py-1 rounded-full">
+              <LiaUserSolid className=" text-2xl md:text-3xl"></LiaUserSolid>
+              <Link to={"/login"}>Login</Link>
+            </div>
+          )}
         </div>
       </div>
       <div className="md:hidden flex justify-between items-center px-5 py-2">

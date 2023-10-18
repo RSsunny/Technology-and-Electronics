@@ -19,7 +19,7 @@ const Navlink = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-1 lg:px-5 border-b py-1 hidden md:flex flex-col md:flex-row gap-1 lg:gap-10 justify-between lg:font-medium capitalize">
+    <div className="max-w-7xl mx-auto px-1 lg:px-5 border-b py-3 hidden md:flex flex-col md:flex-row gap-1 lg:gap-10 justify-between lg:font-medium capitalize">
       {linkname?.map((data, i) => (
         <NavLink
           to={data === "home" ? "/" : data}
