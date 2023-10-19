@@ -1,7 +1,7 @@
 import { AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-const GoogleCard = ({ categori }) => {
+const SamsungCard = ({ categori }) => {
   const { _id, brandName, driscription, name, price, types, rating, photo } =
     categori;
 
@@ -36,4 +36,4 @@ const GoogleCard = ({ categori }) => {
   );
 };
 
-export default GoogleCard;
+export default SamsungCard;

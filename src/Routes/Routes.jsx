@@ -8,6 +8,8 @@ import Profile from "../pages/Profile/Profile";
 import Google from "../pages/Google/Google";
 import AddProduct from "../pages/Add_product/AddProduct";
 import Update from "../pages/Update/Update";
+import Apple from "../pages/Apple/Apple";
+import Samsung from "../pages/Samsung/Samsung";
 
 const Routes = createBrowserRouter([
   {
@@ -39,6 +41,22 @@ const Routes = createBrowserRouter([
         loader: () =>
           fetch(
             "https://technology-and-electronics-server-site.vercel.app/google"
+          ),
+      },
+      {
+        path: "/apple",
+        element: <Apple></Apple>,
+        loader: () =>
+          fetch(
+            "https://technology-and-electronics-server-site.vercel.app/apple"
+          ),
+      },
+      {
+        path: "/samsung",
+        element: <Samsung></Samsung>,
+        loader: () =>
+          fetch(
+            "https://technology-and-electronics-server-site.vercel.app/samsung"
           ),
       },
       {

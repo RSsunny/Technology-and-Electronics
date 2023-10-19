@@ -4,7 +4,9 @@ import { useLocation, useParams } from "react-router-dom";
 const Update = () => {
   const id = useParams();
   const brname = useLocation();
+
   const oldbrandName = brname.state;
+  console.log(oldbrandName);
   const parsid = id.id;
 
   const [oldprodect, setOldprodect] = useState("");
