@@ -3,18 +3,16 @@ import { NavLink } from "react-router-dom";
 const Navlink = () => {
   const linkname = [
     "home",
-    "Apple",
+    "add_product",
+    "apple",
     "samsung",
     "sony",
     "intel",
     "google",
     "dell",
     "panasonic",
-    "toshiba",
     "philips",
     "Acer",
-    "about",
-    "service",
     "contact",
   ];
 
