@@ -37,7 +37,7 @@ const SamsungSlider = () => {
           <div
             className="bg-center bg-cover h-[300px] md:h-[400px] overflow-hidden"
             style={{
-              backgroundImage: `url("https://i.ibb.co/tKPtBCR/googleban1.jpg")`,
+              backgroundImage: `url("https://i.ibb.co/1rbpTwz/samsungbanner2.jpg")`,
             }}
           >
             <div className="absolute left-10 md:left-20 top-16  md:top-24 md:text-[#FF4512]">
@@ -82,7 +82,7 @@ const SamsungSlider = () => {
           <div
             className="bg-center bg-cover h-[300px] md:h-[400px]  "
             style={{
-              backgroundImage: `url("https://i.ibb.co/RBQ60bX/googleban3.jpg")`,
+              backgroundImage: `url("https://i.ibb.co/3vJ1090/samsungbanner1.jpg")`,
             }}
           ></div>
         </SwiperSlide>
@@ -91,31 +91,9 @@ const SamsungSlider = () => {
           <div
             className="bg-center bg-cover h-[300px] md:h-[400px]  relative"
             style={{
-              backgroundImage: `url("https://i.ibb.co/QvgM93x/googleban2.jpg")`,
+              backgroundImage: `url("https://i.ibb.co/7Cyd9Ws/samsungbanner3.jpg")`,
             }}
-          >
-            <div className="absolute left-20 lg:left-32 top-52 hidden md:block">
-              <span className="font-rancho text-7xl font-bold text-[#ff0000f5] ">
-                30%
-              </span>
-              <h1 className="text-3xl font-rancho">Discount</h1>
-            </div>
-            <div className="absolute md:right-20 top-10 md:top-40 md:text-right">
-              <h1 className="text-6xl text-center md:text-right font-rancho md:pr-10">
-                AirPods
-              </h1>
-              <p className="md:w-[300px] px-10">
-                Say “Hey Siri” to do things like play a song, make a call, or
-                get directions.Double-tap to play, skip forward, or answer a
-                phone call
-              </p>
-              <div className="text-center md:text-right md:pr-10">
-                <button className="px-3 md:px-6 md:py-2 border my-2 md:my-5 border-[#FF4512] font-rancho text-[#ff0000f5] text-2xl filter ">
-                  Shop Now
-                </button>
-              </div>
-            </div>
-          </div>
+          ></div>
         </SwiperSlide>
       </Swiper>
     </div>

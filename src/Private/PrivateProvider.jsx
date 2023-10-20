@@ -1,6 +1,6 @@
 import { Navigate, useLocation } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
-
+import PropTypes from "prop-types";
 const PrivateProvider = ({ children }) => {
   const { user, loding } = useAuth();
   const location = useLocation();
@@ -30,3 +30,7 @@ const PrivateProvider = ({ children }) => {
 };
 
 export default PrivateProvider;
+
+PrivateProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};

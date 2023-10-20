@@ -61,8 +61,11 @@ const Login = () => {
   };
   return (
     <>
-      <div className="flex justify-center items-center my-20">
-        <form onSubmit={handlelog} className="flex flex-col gap-3 border p-10">
+      <div className="flex justify-center items-center md:my-20">
+        <form
+          onSubmit={handlelog}
+          className="flex flex-col gap-3 md:border p-3 md:p-10"
+        >
           <h1 className="text-4xl font-rancho text-[#FF4512] text-center mb-5">
             Login{" "}
           </h1>
@@ -70,7 +73,7 @@ const Login = () => {
             <h1 className=" font-semibold">Email :</h1>
             <input
               ref={emailref}
-              className="outline-none border p-2 text-[#FF4512] md:w-[500px] my-3"
+              className="outline-none border p-2 text-[#FF4512] w-[300px] md:w-[500px] my-3"
               type="email"
               name="email"
               id="8"
@@ -80,7 +83,7 @@ const Login = () => {
           <label htmlFor="password">
             <h1 className=" font-semibold">Password :</h1>
             <input
-              className="outline-none border p-2 text-[#FF4512] md:w-[500px] mt-3"
+              className="outline-none border p-2 text-[#FF4512] w-full md:w-[500px] mt-3"
               type="password"
               name="password"
               id="9"
@@ -105,9 +108,9 @@ const Login = () => {
           {error && <h1 className="text-xs text-red-500">{error}</h1>}
           {success && <h1 className="text-xs text-green-500">{success}</h1>}
           <div className="flex justify-center items-center gap-5">
-            <div className="border-2 w-40 border-black"></div>
+            <div className="border-2 w-12 md:w-40 border-black"></div>
             <div className="text-3xl font-rancho">or</div>
-            <div className="border-2 w-40 border-black"></div>
+            <div className="border-2 w-12 md:w-40 border-black"></div>
           </div>
           <div className="flex justify-center gap-5 text-3xl">
             <BsFacebook className="text-blue-700 hover:scale-125 duration-300 cursor-pointer"></BsFacebook>

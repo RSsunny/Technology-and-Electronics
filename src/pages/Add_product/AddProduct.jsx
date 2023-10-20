@@ -54,7 +54,7 @@ const AddProduct = () => {
           <label htmlFor="name">
             <h1 className=" font-semibold">Name :</h1>
             <input
-              className="outline-none border p-2 text-[#FF4512] md:w-[400px] my-3 w-[280px]"
+              className="outline-none border p-2 text-[#FF4512] md:w-[400px] my-3 w-[300px]"
               type="text"
               name="name"
               id="1001"

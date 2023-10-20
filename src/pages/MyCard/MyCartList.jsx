@@ -1,9 +1,9 @@
 import { RiDeleteBinLine } from "react-icons/ri";
 import Swal from "sweetalert2";
-
+import PropTypes from "prop-types";
 const MyCartList = ({ totalproduct, product, count, products }) => {
   const { _id, brandName, name, price } = product || {};
-  console.log(product);
+
   const handledelete = (_id) => {
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
@@ -79,3 +79,9 @@ const MyCartList = ({ totalproduct, product, count, products }) => {
 };
 
 export default MyCartList;
+MyCartList.propTypes = {
+  totalproduct: PropTypes.array.isRequired,
+  product: PropTypes.object.isRequired,
+  count: PropTypes.number.isRequired,
+  products: PropTypes.func.isRequired,
+};

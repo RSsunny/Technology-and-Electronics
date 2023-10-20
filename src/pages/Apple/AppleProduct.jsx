@@ -7,7 +7,7 @@ const AppleProduct = () => {
 
   const matchProdect = data?.find((datas) => datas._id == id.id);
   console.log(matchProdect);
-  const { _id, brandName, driscription, name, price, types, rating, photo } =
+  const { brandName, driscription, name, price, types, rating, photo } =
     matchProdect;
   const handleaddcart = () => {
     fetch(`https://technology-and-electronics-server-site.vercel.app/mycart`, {

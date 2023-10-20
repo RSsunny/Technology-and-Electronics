@@ -55,15 +55,18 @@ const Register = () => {
   };
 
   return (
-    <div className="flex justify-center items-center my-20">
-      <form onSubmit={handlesubmit} className="flex flex-col gap-3 border p-10">
+    <div className="flex justify-center items-center md:my-20">
+      <form
+        onSubmit={handlesubmit}
+        className="flex flex-col md:gap-3 border p-2 md:p-10"
+      >
         <h1 className="text-4xl font-rancho text-[#FF4512] text-center mb-5">
           Register
         </h1>
         <label htmlFor="fristName">
           <h1 className=" font-semibold">Frist Name :</h1>
           <input
-            className="outline-none border p-2 text-[#FF4512] md:w-[500px] my-3"
+            className="outline-none border p-2 text-[#FF4512] w-[300px] md:w-[500px] my-3"
             type="text"
             name="fristName"
             id="1"
@@ -73,7 +76,7 @@ const Register = () => {
         <label htmlFor="lastName">
           <h1 className=" font-semibold">Last Name :</h1>
           <input
-            className="outline-none border p-2 text-[#FF4512] md:w-[500px] my-3"
+            className="outline-none border p-2 text-[#FF4512] w-[300px]  md:w-[500px] my-3"
             type="text"
             name="lastName"
             id="2"
@@ -83,7 +86,7 @@ const Register = () => {
         <label htmlFor="phone">
           <h1 className=" font-semibold">Phone :</h1>
           <input
-            className="outline-none border p-2 text-[#FF4512] md:w-[500px] my-3"
+            className="outline-none border p-2 text-[#FF4512] w-[300px]  md:w-[500px] my-3"
             type="number"
             name="phone"
             id="3"
@@ -93,7 +96,7 @@ const Register = () => {
         <label htmlFor="email">
           <h1 className=" font-semibold">Email :</h1>
           <input
-            className="outline-none border p-2 text-[#FF4512] md:w-[500px] my-3"
+            className="outline-none border p-2 text-[#FF4512] w-[300px]  md:w-[500px] my-3"
             type="email"
             name="email"
             id="4"
@@ -103,7 +106,7 @@ const Register = () => {
         <label htmlFor="password">
           <h1 className=" font-semibold">Password :</h1>
           <input
-            className="outline-none border p-2 text-[#FF4512] md:w-[500px] mt-3"
+            className="outline-none border p-2 text-[#FF4512] w-[300px]  md:w-[500px] mt-3"
             type="password"
             name="password"
             id="5"
@@ -113,14 +116,14 @@ const Register = () => {
         <label htmlFor="confpassword">
           <h1 className=" font-semibold">Confrom Password :</h1>
           <input
-            className="outline-none border p-2 text-[#FF4512] md:w-[500px] mt-3"
+            className="outline-none border p-2 text-[#FF4512] w-[300px]  md:w-[500px] mt-3"
             type="password"
             name="confpassword"
             id="6"
             required
           />
         </label>
-        <div className="flex items-center gap-3 text-xs  justify-between ">
+        <div className="flex flex-col md:flex-row items-center md:gap-3 text-xs  justify-between mt-2 md:mt-0">
           <div className="flex gap-2">
             <input
               className="cursor-pointer"
@@ -128,7 +131,7 @@ const Register = () => {
               name="checkbox"
               id="7"
             />
-            <p>
+            <p className="text-xs">
               Our treams and condition{" "}
               <Link className="font-semibold">read more ...</Link>{" "}
             </p>

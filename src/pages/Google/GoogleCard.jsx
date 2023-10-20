@@ -1,10 +1,10 @@
 import { AiFillStar } from "react-icons/ai";
-import { Link, NavLink, useLocation } from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import useAuth from "../../Hooks/useAuth";
 const GoogleCard = ({ categori }) => {
-  const { _id, brandName, driscription, name, price, types, rating, photo } =
-    categori;
-
+  const { _id, brandName, driscription, name, price, rating, photo } = categori;
+  const { user } = useAuth();
   return (
     <div className="flex flex-col md:flex-row items-center gap-2 md:gap-10   md:p-3">
       <div className="md:h-[200px] md:w-[300px] lg:w-[400px] overflow-hidden">
@@ -29,7 +29,7 @@ const GoogleCard = ({ categori }) => {
           </Link>
           <Link
             to={`/update/${_id}`}
-            state={`/update/${_id}`}
+            state={user ? `${brandName}` : `/update/${_id}`}
             className="px-2 lg:px-4  lg:py-1 border rounded-full border-[#FF4512] hover:bg-[#FF4512] duration-700 ease-linear"
           >
             Update
@@ -41,3 +41,7 @@ const GoogleCard = ({ categori }) => {
 };
 
 export default GoogleCard;
+
+GoogleCard.propTypes = {
+  categori: PropTypes.object.isRequired,
+};

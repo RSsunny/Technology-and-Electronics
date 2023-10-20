@@ -40,41 +40,43 @@ const GoogleSlider = () => {
               backgroundImage: `url("https://i.ibb.co/tKPtBCR/googleban1.jpg")`,
             }}
           >
-            <div className="absolute left-10 md:left-20 top-16  md:top-24 md:text-[#FF4512]">
-              <h1
-                className="text-5xl md:text-6xl font-rancho mb-2  md:mb-3  overflow-hidden"
-                data-aos="fade-right"
-                data-aos-mirror="true"
-                data-aos-delay="500"
-              >
-                Special offer
-              </h1>
+            <div className="inset-0   md:text-[#FF4512] flex justify-center items-center  h-full text-center">
+              <div>
+                <h1
+                  className="text-5xl md:text-8xl font-rancho mb-2  md:mb-3  overflow-hidden"
+                  data-aos="fade-right"
+                  data-aos-mirror="true"
+                  data-aos-delay="500"
+                >
+                  Special offer
+                </h1>
 
-              <p
-                className="text-2xl"
-                data-aos="fade-left"
-                data-aos-mirror="true"
-                data-aos-delay="800"
-              >
-                up to <span className="text-5xl font-rancho">50% </span>off
-              </p>
-              <p
-                className="font-rancho text-2xl"
-                data-aos="fade-right"
-                data-aos-mirror="true"
-                data-aos-delay="1100"
-              >
-                only today
-              </p>
+                <p
+                  className="text-2xl"
+                  data-aos="fade-left"
+                  data-aos-mirror="true"
+                  data-aos-delay="800"
+                >
+                  up to <span className="text-5xl font-rancho">30% </span>off
+                </p>
+                <p
+                  className="font-rancho text-2xl"
+                  data-aos="fade-right"
+                  data-aos-mirror="true"
+                  data-aos-delay="1100"
+                >
+                  only today
+                </p>
 
-              <button
-                className="px-3 md:px-6 md:py-2 border my-2 md:my-5 border-[#FF4512] font-rancho  text-2xl filter rounded-full"
-                data-aos="fade-left"
-                data-aos-mirror="true"
-                data-aos-delay="1400"
-              >
-                Buy Now
-              </button>
+                <button
+                  className="px-3 md:px-6 md:py-2 border my-2 md:my-5 border-[#FF4512] font-rancho  text-2xl filter rounded-full"
+                  data-aos="fade-left"
+                  data-aos-mirror="true"
+                  data-aos-delay="1400"
+                >
+                  Buy Now
+                </button>
+              </div>
             </div>
           </div>
         </SwiperSlide>
@@ -94,13 +96,13 @@ const GoogleSlider = () => {
               backgroundImage: `url("https://i.ibb.co/QvgM93x/googleban2.jpg")`,
             }}
           >
-            <div className="absolute left-20 lg:left-32 top-52 hidden md:block">
+            <div className="absolute left-20 lg:left-32 top-32 hidden md:block">
               <span className="font-rancho text-7xl font-bold text-[#ff0000f5] ">
                 30%
               </span>
               <h1 className="text-3xl font-rancho">Discount</h1>
             </div>
-            <div className="absolute md:right-20 top-10 md:top-40 md:text-right">
+            <div className="absolute md:right-20 top-10 md:top-20  md:text-right">
               <h1 className="text-6xl text-center md:text-right font-rancho md:pr-10">
                 AirPods
               </h1>

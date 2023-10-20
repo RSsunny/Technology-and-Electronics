@@ -37,7 +37,7 @@ const IntelSlider = () => {
           <div
             className="bg-center bg-cover h-[300px] md:h-[400px] overflow-hidden"
             style={{
-              backgroundImage: `url("https://i.ibb.co/tKPtBCR/googleban1.jpg")`,
+              backgroundImage: `url("https://i.ibb.co/wRnjLFG/intelbanner1.jpg")`,
             }}
           >
             <div className="absolute left-10 md:left-20 top-16  md:top-24 md:text-[#FF4512]">
@@ -82,7 +82,7 @@ const IntelSlider = () => {
           <div
             className="bg-center bg-cover h-[300px] md:h-[400px]  "
             style={{
-              backgroundImage: `url("https://i.ibb.co/RBQ60bX/googleban3.jpg")`,
+              backgroundImage: `url("https://i.ibb.co/B6b5pz8/intelbanner2.jpg")`,
             }}
           ></div>
         </SwiperSlide>
@@ -91,7 +91,7 @@ const IntelSlider = () => {
           <div
             className="bg-center bg-cover h-[300px] md:h-[400px]  relative"
             style={{
-              backgroundImage: `url("https://i.ibb.co/QvgM93x/googleban2.jpg")`,
+              backgroundImage: `url("https://i.ibb.co/YjpDDmW/intelbanner3.jpg")`,
             }}
           >
             <div className="absolute left-20 lg:left-32 top-52 hidden md:block">
