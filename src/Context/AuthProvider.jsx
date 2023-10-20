@@ -37,6 +37,7 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unSabscribe = onAuthStateChanged(auth, (cruntUser) => {
       setUser(cruntUser);
+      setLoding(false);
     });
     return () => {
       unSabscribe();

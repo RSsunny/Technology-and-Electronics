@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 const AddProduct = () => {
   const handleAdd = (e) => {
     e.preventDefault();
@@ -28,7 +30,16 @@ const AddProduct = () => {
       }
     )
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Product add complete",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        form.reset();
+      });
   };
   return (
     <div className="flex justify-center items-center my-20">
@@ -55,6 +66,7 @@ const AddProduct = () => {
               name="brandName"
               id="1002"
               required
+              placeholder="brand name must be lowercase (google,apple...ect.)"
             />
           </label>
         </div>

@@ -9,10 +9,10 @@ const Navlink = () => {
     "sony",
     "intel",
     "google",
+    "Acer",
     "dell",
     "panasonic",
     "philips",
-    "Acer",
     "contact",
   ];
 

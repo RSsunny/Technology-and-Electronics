@@ -7,7 +7,7 @@ import "swiper/css/scrollbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const SamsungSlider = () => {
+const IntelSlider = () => {
   AOS.init({
     disable: false,
     startEvent: "DOMContentLoaded",
@@ -122,4 +122,4 @@ const SamsungSlider = () => {
   );
 };
 
-export default SamsungSlider;
+export default IntelSlider;

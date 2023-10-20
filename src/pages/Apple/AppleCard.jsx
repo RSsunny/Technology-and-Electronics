@@ -20,9 +20,12 @@ const AppleCard = ({ categori }) => {
           <AiFillStar></AiFillStar>
         </div>
         <div className="flex items-center gap-5 lg:gap-10 mt-2">
-          <button className="px-2 lg:px-4  lg:py-1 border rounded-full border-[#FF4512] hover:bg-[#FF4512] duration-700 ease-linear">
+          <Link
+            to={`/appleproduct/${_id}`}
+            className="px-2 lg:px-4  lg:py-1 border rounded-full border-[#FF4512] hover:bg-[#FF4512] duration-700 ease-linear"
+          >
             Details
-          </button>
+          </Link>
           <Link
             to={`/update/${_id}`}
             state={`${brandName}`}

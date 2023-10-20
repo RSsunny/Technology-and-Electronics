@@ -40,7 +40,9 @@ const Navbar = () => {
             <h1 className="absolute text-xs right-0 top-0 bg-white rounded-full p-1 border-2 border-white"></h1>
           </div>
           <div className="relative ">
-            <FaShopify></FaShopify>
+            <Link to={"/mycart"}>
+              <FaShopify></FaShopify>
+            </Link>
             <h1 className="absolute text-xs right-0 top-0 bg-white rounded-full p-1 border-2 border-white"></h1>
           </div>
 

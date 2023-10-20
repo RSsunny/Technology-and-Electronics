@@ -1,7 +1,7 @@
 import { AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-const SamsungCard = ({ categori }) => {
+const SonyCard = ({ categori }) => {
   const { _id, brandName, driscription, name, price, types, rating, photo } =
     categori;
 
@@ -21,7 +21,7 @@ const SamsungCard = ({ categori }) => {
         </div>
         <div className="flex items-center gap-5 lg:gap-10 mt-2">
           <Link
-            to={`/samsungproduct/${_id}`}
+            to={`/sonyproduct/${_id}`}
             className="px-2 lg:px-4  lg:py-1 border rounded-full border-[#FF4512] hover:bg-[#FF4512] duration-700 ease-linear"
           >
             Details
@@ -39,4 +39,4 @@ const SamsungCard = ({ categori }) => {
   );
 };
 
-export default SamsungCard;
+export default SonyCard;
