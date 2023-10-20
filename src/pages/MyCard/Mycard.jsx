@@ -6,11 +6,11 @@ const Mycard = () => {
   const mycartproduct = useLoaderData() || [];
   const [products, setProducts] = useState(mycartproduct);
   return (
-    <div className="text-black px-2 md:px-5">
+    <div className=" px-2 md:px-5">
       <h1 className="mt-10 text-4xl font-rancho text-center font-bold ">
         My cart{" "}
       </h1>
-      <table className="table hidden md:table  max-w-6xl mx-auto px-5 border my-10 text-black">
+      <table className="table  md:table  max-w-6xl mx-auto px-5 border my-10  ">
         {/* head */}
         <thead>
           <tr className="bg-cover bg-center  ">

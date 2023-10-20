@@ -12,7 +12,7 @@ const BrandCard = ({ brand }) => {
       <div className="h-[200px] w-full">
         <img className="h-full w-full" src={image} alt="" />
       </div>
-      <h1>{brand_name}</h1>
+      <h1 className="text-3xl  font-rancho">{brand_name}</h1>
     </div>
   );
 };

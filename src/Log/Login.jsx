@@ -1,8 +1,9 @@
 import { BsFacebook, BsGithub } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import { useRef, useState } from "react";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const { userLogin, mediasignin, passwordreste } = useAuth();
@@ -10,6 +11,8 @@ const Login = () => {
   const [error, seterror] = useState("");
   const navigate = useNavigate();
   const emailref = useRef();
+  const location = useLocation();
+  console.log(location);
   const handlelog = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -23,7 +26,7 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         setSuccess("login success");
-        navigate("/");
+        navigate(location.state ? `${location.state}` : "/");
       })
       .catch((error) => {
         console.log(error);
@@ -35,7 +38,7 @@ const Login = () => {
     media()
       .then((result) => {
         console.log(result.user);
-        navigate("/");
+        navigate(location.state ? `${location.state}` : "/");
       })
       .catch((error) => {
         console.log(error);
@@ -44,7 +47,17 @@ const Login = () => {
 
   const resetPass = () => {
     const email = emailref.current.value;
-    passwordreste(email).then().then();
+    passwordreste(email)
+      .then()
+      .then(() => {
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Place check your email",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      });
   };
   return (
     <>

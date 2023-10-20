@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const SonyProduct = () => {
   const data = useLoaderData();
@@ -18,6 +19,13 @@ const SonyProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Product add complete",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       });
   };
 

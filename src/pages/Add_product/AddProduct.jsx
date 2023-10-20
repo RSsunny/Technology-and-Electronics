@@ -30,7 +30,7 @@ const AddProduct = () => {
       }
     )
       .then((res) => res.json())
-      .then((data) => {
+      .then(() => {
         Swal.fire({
           position: "center",
           icon: "success",
@@ -42,8 +42,11 @@ const AddProduct = () => {
       });
   };
   return (
-    <div className="flex justify-center items-center my-20">
-      <form onSubmit={handleAdd} className="flex flex-col gap-3 border p-10">
+    <div className="flex justify-center items-center my-10 md:my-20 max-w-7xl mx-auto">
+      <form
+        onSubmit={handleAdd}
+        className="flex flex-col gap-3 md:border p-2 md:p-10 mx-2 md:mx-0"
+      >
         <h1 className="text-4xl font-rancho text-[#FF4512] text-center mb-5">
           Add Product
         </h1>
@@ -51,7 +54,7 @@ const AddProduct = () => {
           <label htmlFor="name">
             <h1 className=" font-semibold">Name :</h1>
             <input
-              className="outline-none border p-2 text-[#FF4512] md:w-[400px] my-3"
+              className="outline-none border p-2 text-[#FF4512] md:w-[400px] my-3 w-[280px]"
               type="text"
               name="name"
               id="1001"
@@ -61,7 +64,7 @@ const AddProduct = () => {
           <label htmlFor="brandName">
             <h1 className=" font-semibold">Brand Name:</h1>
             <input
-              className="outline-none border p-2 text-[#FF4512] md:w-[400px] my-3"
+              className="outline-none border p-2 text-[#FF4512] w-full md:w-[400px] my-3"
               type="text"
               name="brandName"
               id="1002"
@@ -74,7 +77,7 @@ const AddProduct = () => {
           <label htmlFor="types">
             <h1 className=" font-semibold">Type :</h1>
             <input
-              className="outline-none border p-2 text-[#FF4512] md:w-[400px] my-3"
+              className="outline-none border p-2 text-[#FF4512] w-full md:w-[400px] my-3"
               type="text"
               name="types"
               id="1003"
@@ -84,7 +87,7 @@ const AddProduct = () => {
           <label htmlFor="price">
             <h1 className=" font-semibold">Price:</h1>
             <input
-              className="outline-none border p-2 text-[#FF4512] md:w-[400px] my-3"
+              className="outline-none border p-2 text-[#FF4512] w-full md:w-[400px] my-3"
               type="text"
               name="price"
               id="1004"
@@ -96,7 +99,7 @@ const AddProduct = () => {
           <label htmlFor="photo">
             <h1 className=" font-semibold">Photo :</h1>
             <input
-              className="outline-none border p-2 text-[#FF4512] md:w-[400px] my-3"
+              className="outline-none border p-2 text-[#FF4512] w-full md:w-[400px] my-3"
               type="text"
               name="photo"
               id="1005"
@@ -106,7 +109,7 @@ const AddProduct = () => {
           <label htmlFor="rating">
             <h1 className=" font-semibold">Rating:</h1>
             <input
-              className="outline-none border p-2 text-[#FF4512] md:w-[400px] my-3"
+              className="outline-none border p-2 text-[#FF4512] w-full md:w-[400px] my-3"
               type="text"
               name="rating"
               id="1006"

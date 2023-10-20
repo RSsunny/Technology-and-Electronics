@@ -1,26 +1,62 @@
 import { RiDeleteBinLine } from "react-icons/ri";
+import Swal from "sweetalert2";
 
 const MyCartList = ({ totalproduct, product, count, products }) => {
   const { _id, brandName, name, price } = product || {};
   console.log(product);
   const handledelete = (_id) => {
-    fetch(
-      `https://technology-and-electronics-server-site.vercel.app/mycart/${_id}`,
-      {
-        method: "DELETE",
-      }
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        const remaining = totalproduct.filter((data) => data._id !== _id);
-        products(remaining);
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: "btn btn-success",
+        cancelButton: "btn btn-danger",
+      },
+      buttonsStyling: false,
+    });
+    swalWithBootstrapButtons
+      .fire({
+        title: "Are you sure?",
+        text: "If you delete this product, you have to re-add it, otherwise you won't find it!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, delete it!",
+        cancelButtonText: "No, cancel!",
+        reverseButtons: true,
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+          swalWithBootstrapButtons.fire(
+            "Deleted!",
+            "Your product has been deleted.",
+            "success"
+          );
+          fetch(
+            `https://technology-and-electronics-server-site.vercel.app/mycart/${_id}`,
+            {
+              method: "DELETE",
+            }
+          )
+            .then((res) => res.json())
+            .then((data) => {
+              console.log(data);
+              const remaining = totalproduct.filter((data) => data._id !== _id);
+              products(remaining);
+            });
+        } else if (
+          /* Read more about handling dismissals below */
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+          swalWithBootstrapButtons.fire(
+            "Cancelled",
+            "Your imaginary file is safe :)",
+            "error"
+          );
+        }
       });
   };
 
   return (
     <tr>
-      <th className="hidden md:block text-center">{count}</th>
+      <th className="text-center">{count}</th>
       <td className="border">
         <div className="flex items-center space-x-3">
           <div>

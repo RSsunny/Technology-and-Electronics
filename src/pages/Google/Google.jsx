@@ -9,7 +9,7 @@ const Google = () => {
     <div>
       <GoogleSlider></GoogleSlider>
 
-      <div className="grid grid-cols-2 gap-20 max-w-7xl mx-auto px-5 lg:px-0">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 max-w-7xl mx-auto px-2 lg:px-0 my-10">
         {googledata?.map((data, idx) => (
           <GoogleCard key={idx} categori={data}></GoogleCard>
         ))}

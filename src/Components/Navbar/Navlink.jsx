@@ -21,6 +21,7 @@ const Navlink = () => {
       {linkname?.map((data, i) => (
         <NavLink
           to={data === "home" ? "/" : data}
+          state={data === "add_product" && `/${data}`}
           key={i}
           className={({ isActive, isPending }) =>
             isPending

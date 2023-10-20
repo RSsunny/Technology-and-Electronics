@@ -31,14 +31,14 @@ const GoogleProduct = () => {
 
   return (
     <div className="max-w-7xl mx-auto my-10">
-      <div className="flex gap-10 px-5 lg:px-0">
-        <div className="w-[600px] h-[500px]">
+      <div className="flex flex-col md:flex-row  gap-10 px-2 md:px-5 lg:px-0">
+        <div className=" md:w-[600px] md:h-[500px]">
           <img className="h-full w-full" src={photo} alt="" />
         </div>
-        <div>
+        <div className="px-2 md:px-0">
           <h1 className="text-5xl">{name}</h1>
           <h2 className="text-xl my-3">{driscription}</h2>
-          <ul className="flex space-y-4 flex-col mt-10 text-xl">
+          <ul className="flex md:space-y-4 flex-col md:mt-10 text-xl">
             <li>Brand: {brandName}</li>
 
             <li className="">Price: {price}</li>
@@ -54,7 +54,7 @@ const GoogleProduct = () => {
         </div>
       </div>
 
-      <div className="my-20 px-5 lg:px-0">
+      <div className="my-10 md:my-20 px-5 lg:px-0">
         <p>
           The Google Pixel 7a is a remarkable addition to acclaimed lineup of
           smartphones. Building upon the success of its predecessors, this phone

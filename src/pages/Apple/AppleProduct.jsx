@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const AppleProduct = () => {
   const data = useLoaderData();
@@ -17,18 +18,25 @@ const AppleProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Product add complete",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       });
   };
   return (
     <div className="max-w-7xl mx-auto my-10">
-      <div className="flex gap-10 px-5 lg:px-0">
-        <div className="w-[600px] h-[500px]">
+      <div className="flex flex-col md:flex-row  gap-10 px-5 lg:px-0">
+        <div className="md:w-[600px] md:h-[500px]">
           <img className="h-full w-full" src={photo} alt="" />
         </div>
         <div>
           <h1 className="text-5xl">{name}</h1>
           <h2 className="text-xl my-3">{driscription}</h2>
-          <ul className="flex space-y-4 flex-col mt-10 text-xl">
+          <ul className="flex md:space-y-4 flex-col mt-10 md:text-xl">
             <li>Brand: {brandName}</li>
 
             <li className="">Price: {price}</li>
@@ -37,14 +45,14 @@ const AppleProduct = () => {
           </ul>
           <button
             onClick={handleaddcart}
-            className="px-4 py-2 border inline-block mt-10 border-[#FF4512] font-rancho text-3xl hover:bg-[#FF4512] duration-500 ease-out hover:text-white"
+            className="px-4 py-2 border inline-block mt-5 md:mt-10 border-[#FF4512] font-rancho text-3xl hover:bg-[#FF4512] duration-500 ease-out hover:text-white"
           >
             Add to Curt
           </button>
         </div>
       </div>
 
-      <div className="my-20 px-5 lg:px-0">
+      <div className="  my-10 md:my-20 px-5 lg:px-0">
         <p>
           The Google Pixel 7a is a remarkable addition to acclaimed lineup of
           smartphones. Building upon the success of its predecessors, this phone

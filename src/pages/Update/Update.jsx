@@ -65,8 +65,8 @@ const Update = () => {
   }, [start, oldbrandName, parsid]);
 
   return (
-    <div className="flex justify-center items-center my-20">
-      <form onSubmit={handleAdd} className="flex flex-col gap-3 border p-10">
+    <div className="flex justify-center items-center mt-5 md:my-20">
+      <form onSubmit={handleAdd} className="flex flex-col gap-3  p-3 md:p-10">
         <h1 className="text-4xl font-rancho text-[#FF4512] text-center mb-5">
           Update Product
         </h1>
@@ -74,7 +74,7 @@ const Update = () => {
           <label htmlFor="name">
             <h1 className=" font-semibold">Name :</h1>
             <input
-              className="outline-none border p-2 text-[#FF4512] md:w-[400px] my-3"
+              className="outline-none border p-2 text-[#FF4512] w-[280px] md:w-[400px] my-3"
               type="text"
               name="name"
               id="1001"
@@ -85,7 +85,7 @@ const Update = () => {
             <h1 className=" font-semibold">Brand Name:</h1>
             <input
               ref={brandNameRef}
-              className="outline-none border p-2 text-[#FF4512] md:w-[400px] my-3"
+              className="outline-none border p-2 text-[#FF4512] w-full md:w-[400px] my-3"
               type="text"
               name="brandName"
               id="1002"
@@ -97,7 +97,7 @@ const Update = () => {
           <label htmlFor="types">
             <h1 className=" font-semibold">Type :</h1>
             <input
-              className="outline-none border p-2 text-[#FF4512] md:w-[400px] my-3"
+              className="outline-none border p-2 text-[#FF4512] w-full md:w-[400px] my-3"
               type="text"
               name="types"
               id="1003"
@@ -107,7 +107,7 @@ const Update = () => {
           <label htmlFor="price">
             <h1 className=" font-semibold">Price:</h1>
             <input
-              className="outline-none border p-2 text-[#FF4512] md:w-[400px] my-3"
+              className="outline-none border p-2 text-[#FF4512] w-full md:w-[400px] my-3"
               type="text"
               name="price"
               id="1004"
@@ -119,7 +119,7 @@ const Update = () => {
           <label htmlFor="photo">
             <h1 className=" font-semibold">Photo :</h1>
             <input
-              className="outline-none border p-2 text-[#FF4512] md:w-[400px] my-3"
+              className="outline-none border p-2 text-[#FF4512] w-full md:w-[400px] my-3"
               type="text"
               name="photo"
               id="1005"
@@ -129,7 +129,7 @@ const Update = () => {
           <label htmlFor="rating">
             <h1 className=" font-semibold">Rating:</h1>
             <input
-              className="outline-none border p-2 text-[#FF4512] md:w-[400px] my-3"
+              className="outline-none border p-2 text-[#FF4512] w-full md:w-[400px] my-3"
               type="text"
               name="rating"
               id="1006"
