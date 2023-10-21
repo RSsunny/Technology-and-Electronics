@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Update = () => {
   const id = useParams();
@@ -12,6 +13,7 @@ const Update = () => {
   const brandNameRef = useRef();
   const { brandName, driscription, name, price, types, rating, photo } =
     oldprodect || {};
+  const navigate = useNavigate();
 
   const handleAdd = (e) => {
     e.preventDefault();
@@ -47,8 +49,15 @@ const Update = () => {
       }
     )
       .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
+      .then(() => {
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Product update complete",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        navigate(-1);
       });
   };
 

@@ -9,14 +9,14 @@ const SectionOne = () => {
     animatedClassName: "aos-animate",
     debounceDelay: 50,
     throttleDelay: 99,
-    delay: 700,
+    delay: 100,
     duration: 1000,
     easing: "ease",
     mirror: false,
     anchorPlacement: "top-bottom",
   });
   return (
-    <div className="max-w-7xl mx-auto ">
+    <div className="max-w-7xl mx-auto mt-20">
       <h1 className="text-5xl font-rancho text-center">Our Service</h1>
       <p className="text-center md:w-[600px] px-3 mx-auto my-2">
         The AI-driven features, such as Night Sight and Super Res Zoom, enhance
@@ -29,7 +29,7 @@ const SectionOne = () => {
             className="text-3xl lg:text-5xl font-rancho mb-5"
             data-aos="fade-right"
             data-aos-mirror="true"
-            data-aos-delay="600"
+            data-aos-delay="400"
           >
             We have fast delivery system
           </h1>
@@ -37,7 +37,7 @@ const SectionOne = () => {
             className="md:w-[500px]"
             data-aos="fade-right"
             data-aos-mirror="true"
-            data-aos-delay="700"
+            data-aos-delay="600"
           >
             Enjoy fast and reliable delivery options when you order the Intel
             Core TV Processor. We offer nationwide shipping, ensuring that your
